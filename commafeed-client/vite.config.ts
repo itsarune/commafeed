@@ -32,7 +32,7 @@ export default defineConfig(() => ({
     ],
     base: "./",
     server: {
-        port: 8082,
+        port: process.env.PORT,
         proxy: {
             "/rest": "http://localhost:8083",
             "/next": "http://localhost:8083",
