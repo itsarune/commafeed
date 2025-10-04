@@ -32,7 +32,7 @@ export default defineConfig(() => ({
     ],
     base: "./",
     server: {
-        port: process.env.PORT,
+        port: 8082,
         proxy: {
             "/rest": "http://localhost:8083",
             "/next": "http://localhost:8083",
@@ -44,6 +44,7 @@ export default defineConfig(() => ({
             "/j_security_check": "http://localhost:8083",
             "/logout": "http://localhost:8083",
         },
+        allowedHosts: true,
     },
     build: {
         chunkSizeWarningLimit: 3500,
